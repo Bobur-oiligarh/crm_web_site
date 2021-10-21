@@ -1,0 +1,28 @@
+import requests
+
+chat_id = -567888359
+
+token = '1872793445:AAFgXEQZXQL9Yr1HxieU8F3EabdGzWpO3TQ'
+
+text = 'Testetxt_2'
+
+def sendTelegram():
+    api = 'https://api.telegram.org/bot'
+
+    method = api + token + '/sendMessage'
+
+    req = requests.post(method, data = {
+        'chat_id': chat_id,
+        'text':text
+    })
+
+sendTelegram()
+
+
+
+
+
+
+
+
+
